@@ -12,9 +12,9 @@ public class IPhoneXFactory extends IPhoneFactory {
 	}
 
 	public IPhone createIPhone(String level) {
-		if(level.equals("standard")) {
+		if(level.equalsIgnoreCase("standard")) {
 			return new IPhoneX(rules);
-		} else if(level.equals("highEnd")) {
+		} else if(level.equalsIgnoreCase("highEnd")) {
 			return new IPhoneXSMax(rules);
 		} else return null;
 	}

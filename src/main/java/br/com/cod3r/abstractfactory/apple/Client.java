@@ -1,5 +1,6 @@
 package br.com.cod3r.abstractfactory.apple;
 
+import br.com.cod3r.abstractfactory.apple.factory.IPhone11Factory;
 import br.com.cod3r.abstractfactory.apple.factory.IPhoneFactory;
 import br.com.cod3r.abstractfactory.apple.factory.IPhoneXFactory;
 import br.com.cod3r.abstractfactory.apple.factory.abstractFactory.BrazilianRulesAbstractFactory;
@@ -13,10 +14,15 @@ public class Client {
 		//CountryRulesAbstractFactory rules = new BrazilianRulesAbstractFactory();
 		CountryRulesAbstractFactory rules = new USRulesAbstractFactory();
 		IPhoneFactory genXFactory = new IPhoneXFactory(rules);
+		IPhoneFactory gen11Factory = new IPhone11Factory(rules);
 		
 		System.out.println("### Ordering an iPhone X");
-		IPhone iPhone = genXFactory.orderIPhone("standard");
-		System.out.println(iPhone);
+		IPhone iPhoneX = genXFactory.orderIPhone("standard");
+		System.out.println(iPhoneX);
+
+		System.out.println("\n\n### Ordering an iPhone 11 HighEnd");
+		IPhone iPhone11 = gen11Factory.orderIPhone("highEnd");
+		System.out.println(iPhone11);
 
 	}
 }
