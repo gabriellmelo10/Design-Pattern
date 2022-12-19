@@ -1,6 +1,6 @@
-package br.com.cod3r.factory.app.dbadapter.db;
+package br.com.cod3r.factory.app.dbadapter.before.db;
 
-public class OracleDB implements DB {
+public class OracleDB {
 
 	public void query(String sql) {
 		System.out.println("Querying " + sql + " in Oracle database");
