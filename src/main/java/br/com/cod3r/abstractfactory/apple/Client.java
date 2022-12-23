@@ -11,8 +11,8 @@ import br.com.cod3r.abstractfactory.apple.model.iphone.IPhone;
 public class Client {
 	
 	public static void main(String[] args) {
-		//CountryRulesAbstractFactory rules = new BrazilianRulesAbstractFactory();
-		CountryRulesAbstractFactory rules = new USRulesAbstractFactory();
+		CountryRulesAbstractFactory rules = new BrazilianRulesAbstractFactory();
+		//CountryRulesAbstractFactory rules = new USRulesAbstractFactory();
 		IPhoneFactory genXFactory = new IPhoneXFactory(rules);
 		IPhoneFactory gen11Factory = new IPhone11Factory(rules);
 		
