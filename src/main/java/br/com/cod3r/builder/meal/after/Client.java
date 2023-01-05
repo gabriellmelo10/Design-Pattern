@@ -1,4 +1,4 @@
-package br.com.cod3r.builder.meal;
+package br.com.cod3r.builder.meal.after;
 
 public class Client {
 	
